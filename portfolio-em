@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Edward Moreaux</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #000080;
+        }
+        header {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .content h2 {
+            color: #000080;
+            text-align: center;
+            font-size: 2em;
+        }
+        .content p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #f2f2f2;
+            margin-top: 30px;
+        }
+        footer p {
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Edward Moreaux</h1>
+        <p>Étudiant en commercialisation de produits et services sportifs</p>
+    </header>
+
+    <div class="content">
+        <h2>Bienvenue sur mon portfolio</h2>
+        <p>
+            Bonjour ! Je m'appelle Edward Moreaux et je suis actuellement en licence de commercialisation de produits et services sportifs au sein de l'ILEPS. J'ai créé ce site web pour me présenter et partager mon parcours.
+        </p>
+        <p>
+            Né en 2001, je suis aujourd'hui en alternance au sein de l'entreprise New Balance, où je développe mes compétences professionnelles. Mes deux grandes passions dans la vie sont le football américain, que je pratique au niveau national, et la préparation physique, domaine dans lequel je souhaite bâtir ma carrière.
+        </p>
+        <p>
+            Je suis une personne dynamique et motivée, cherchant constamment à performer dans tout ce que j'entreprends. Je crois fermement en l'importance de la détermination et de la discipline pour atteindre ses objectifs.
+        </p>
+    </div>
+
+    <footer>
+        <p>© 2024 Edward Moreaux - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
