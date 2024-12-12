@@ -4,52 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Présentation de mon projet</title>
+    <!-- Importation de la police Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
+            color: #2c3e50;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        h1 {
+        h1, h2 {
             text-align: center;
-            color: #2c3e50;
+            color: #2c3e50; /* Bleu marine neutre */
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+            font-weight: 500;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #34495e; /* Légèrement plus clair que le bleu marine */
         }
         p {
             font-size: 1.1em;
             color: #34495e;
+            margin-bottom: 20px;
         }
         ul {
             margin-top: 20px;
         }
         li {
             margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .title-animation {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Style des sections */
+        section {
+            margin-bottom: 30px;
+        }
+        /* Style du bouton de contact */
+        .contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50; /* Bleu marine */
+            color: white;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-btn:hover {
+            background-color: #1a252f; /* Bleu marine plus foncé */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Mon projet</h1>
-        <p>Passionné de sport et de performance, je suis actuellement en cours de commercialisation de produits et services sportifs à l'ILEPS. Mon objectif est clair : devenir préparateur physique d'athlètes de haut niveau au sein d'une structure professionnelle.</p>
-        <p>Cette ambition est née d'une passion de longue date pour l'optimisation des performances sportives, une question qui m'a toujours fasciné. J'ai commencé à explorer ces enjeux dès le lycée, puis à les mettre en pratique au travers de mes expériences en basketball et en football américain.</p>
-        <p>Afin de concrétiser ce projet, je souhaite poursuivre mes études par une licence STAPS Entraînement Sportif à l'issue de mon cursus actuel. Cette formation me permettra d'acquérir les connaissances théoriques et pratiques indispensables pour accompagner les athlètes dans leur développement.</p>
-        <p>Je suis convaincu que ma combinaison d'une formation commerciale et d'une passion pour la performance sportive me permettra d'apporter une valeur ajoutée unique à toute équipe.</p>
-        <h2>Mes atouts :</h2>
-        <ul>
-            <li>Passion pour la préparation physique</li>
-            <li>Expérience pratique en basketball et football américain</li>
-            <li>Motivation à poursuivre des études spécialisées</li>
-            <li>Capacités d'analyse et de communication</li>
-        </ul>
-        <p>Je suis à la recherche d'opportunités pour mettre mes compétences au service d'athlètes et contribuer à leur réussite.</p>
+        <section>
+            <h1 id="title-1">Présentation de mon projet</h1>
+            <p>Passionné de sport et de performance, je suis actuellement en cours de commercialisation de produits et services sportifs à l'ILEPS. Mon objectif est clair : devenir préparateur physique d'athlètes de haut niveau au sein d'une structure professionnelle.</p>
+        </section>
+
+        <section>
+            <h2 id="title-2">Mon parcours</h2>
+            <p>Cette ambition est née d'une passion de longue date pour l'optimisation des performances sportives, une question qui m'a toujours fasciné. J'ai commencé à explorer ces enjeux dès le lycée, puis à les mettre en pratique au travers de mes expériences en basketball et en football américain.</p>
+        </section>
+
+        <section>
+            <h2 id="title-3">Mon projet d'études</h2>
+            <p>Afin de concrétiser ce projet, je souhaite poursuivre mes études par une licence STAPS Entraînement Sportif à l'issue de mon cursus actuel. Cette formation me permettra d'acquérir les connaissances théoriques et pratiques indispensables pour accompagner les athlètes dans leur développement.</p>
+        </section>
+
+        <section>
+            <h2 id="title-4">Mes atouts</h2>
+            <ul>
+                <li>Passion pour la préparation physique</li>
+                <li>Expérience pratique en basketball et football américain</li>
+                <li>Motivation à poursuivre des études spécialisées</li>
+                <li>Capacités d'analyse et de communication</li>
+            </ul>
+        </section>
+
+        <section>
+            <p>Je suis à la recherche d'opportunités pour mettre mes compétences au service d'athlètes de haut niveau et contribuer à leur réussite.</p>
+            <!-- Bouton de contact -->
+            <a href="mailto:ton.email@exemple.com" class="contact-btn">Contactez-moi</a>
+        </section>
     </div>
+
+    <script>
+        // Fonction pour animer les titres quand ils sont visibles
+        function revealTitles() {
+            const titles = document.querySelectorAll('h1, h2');
+            const windowHeight = window.innerHeight;
+            
+            titles.forEach(title => {
+                const titleTop = title.getBoundingClientRect().top;
+                
+                if (titleTop < windowHeight * 0.8) {
+                    title.classList.add('title-animation');
+                }
+            });
+        }
+
+        // Déclenche l'animation au chargement et lors du défilement de la page
+        window.addEventListener('scroll', revealTitles);
+        window.addEventListener('load', revealTitles);
+    </script>
 </body>
 </html>
