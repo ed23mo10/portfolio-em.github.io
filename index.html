@@ -1,65 +1,79 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation de mon projet</title>
-    <!-- Importation de la police Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Portfolio - Edward Moreaux</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #000080;
+        }
+        header {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .content h2 {
+            color: #000080;
+            text-align: center;
+            font-size: 2em;
+        }
+        .content p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #f2f2f2;
+            margin-top: 30px;
+        }
+        footer p {
+            font-size: 0.9em;
+            color: #555;
+        }
+      <img src="IMG_2317.JPG" width="400">
+    </style>
 </head>
 <body>
-    <img src="IMG_2317.JPG" width="400">
-    <div class="container">
-        <section>
-            <h1 id="title-1">Présentation de mon projet</h1>
-            <p>Passionné de sport et de performance, je suis actuellement en cours de commercialisation de produits et services sportifs à l'ILEPS. Mon objectif est clair : devenir préparateur physique d'athlètes de haut niveau au sein d'une structure professionnelle.</p>
-        </section>
+    <header>
+        <h1>Edward Moreaux</h1>
+        <p>Étudiant en commercialisation de produits et services sportifs</p>
+    </header>
 
-        <section>
-            <h2 id="title-2">Mon parcours</h2>
-            <p>Cette ambition est née d'une passion de longue date pour l'optimisation des performances sportives, une question qui m'a toujours fasciné. J'ai commencé à explorer ces enjeux dès le lycée, puis à les mettre en pratique au travers de mes expériences en basketball et en football américain.</p>
-        </section>
-
-        <section>
-            <h2 id="title-3">Mon projet d'études</h2>
-            <p>Afin de concrétiser ce projet, je souhaite poursuivre mes études par une licence STAPS Entraînement Sportif à l'issue de mon cursus actuel. Cette formation me permettra d'acquérir les connaissances théoriques et pratiques indispensables pour accompagner les athlètes dans leur développement.</p>
-        </section>
-
-        <section>
-            <h2 id="title-4">Mes atouts</h2>
-            <ul>
-                <li>Passion pour la préparation physique</li>
-                <li>Expérience pratique en basketball et football américain</li>
-                <li>Motivation à poursuivre des études spécialisées</li>
-                <li>Capacités d'analyse et de communication</li>
-            </ul>
-        </section>
-
-        <section>
-            <p>Je suis à la recherche d'opportunités pour mettre mes compétences au service d'athlètes de haut niveau et contribuer à leur réussite.</p>
-            <!-- Bouton de contact -->
-            <a href="mailto:ton.email@exemple.com" class="contact-btn">Contactez-moi</a>
-        </section>
+    <div class="content">
+        <h2>Bienvenue sur mon portfolio</h2>
+        <p>
+            Bonjour ! Je m'appelle Edward Moreaux et je suis actuellement en licence de commercialisation de produits et services sportifs au sein de l'ILEPS. J'ai créé ce site web pour me présenter et partager mon parcours.
+        </p>
+        <p>
+            Né en 2001, je suis aujourd'hui en alternance au sein de l'entreprise New Balance, où je développe mes compétences professionnelles. Mes deux grandes passions dans la vie sont le football américain, que je pratique au niveau national, et la préparation physique, domaine dans lequel je souhaite bâtir ma carrière.
+        </p>
+        <p>
+            Je suis une personne dynamique et motivée, cherchant constamment à performer dans tout ce que j'entreprends. Je crois fermement en l'importance de la détermination et de la discipline pour atteindre ses objectifs.
+        </p>
     </div>
 
-    <script>
-        // Fonction pour animer les titres quand ils sont visibles
-        function revealTitles() {
-            const titles = document.querySelectorAll('h1, h2');
-            const windowHeight = window.innerHeight;
-            
-            titles.forEach(title => {
-                const titleTop = title.getBoundingClientRect().top;
-                
-                if (titleTop < windowHeight * 0.8) {
-                    title.classList.add('title-animation');
-                }
-            });
-        }
-
-        // Déclenche l'animation au chargement et lors du défilement de la page
-        window.addEventListener('scroll', revealTitles);
-        window.addEventListener('load', revealTitles);
-    </script>
+    <footer>
+        <p>© 2024 Edward Moreaux - Tous droits réservés</p>
+    </footer>
 </body>
 </html>
